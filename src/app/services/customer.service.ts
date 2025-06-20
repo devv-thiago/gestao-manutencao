@@ -1,33 +1,34 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Customer } from '../models/customer';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
 
-  private apiUrl = 'http://localhost:3000/contatos';
+  private apiUrl = 'http://localhost:3000/Customers';
 
   constructor(private http: HttpClient) { }
 
   // GET
-  getContatos(): Observable<number[]> {
-    return this.http.get<number[]>(this.apiUrl);
+  getCustomers(): Observable<Customer[]> {
+    return this.http.get<Customer[]>(this.apiUrl);
   }
 
   // POST
-  criarContato(contato: number): Observable<number> {
-    return this.http.post<number>(this.apiUrl, contato);
+  criarCustomer(Customer: Customer): Observable<Customer> {
+    return this.http.post<Customer>(this.apiUrl, Customer);
   }
 
   // PUT
-  atualizarContato(contato: number): Observable<number> {
-    return this.http.put<number>(`${this.apiUrl}/${contato}`, contato);
+  atualizarCustomer(Customer: Customer): Observable<Customer> {
+    return this.http.put<Customer>(`${this.apiUrl}/${Customer}`, Customer);
   }
 
   // DELETE
-  deletarContato(id: number): Observable<void> {
+  deletarCustomer(id: Customer): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }

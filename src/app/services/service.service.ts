@@ -1,32 +1,33 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Service } from '../models/service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
-private apiUrl = 'http://localhost:3000/contatos';
+private apiUrl = 'http://localhost:3000/Services';
 
   constructor(private http: HttpClient) { }
 
   // GET
-  getContatos(): Observable<number[]> {
-    return this.http.get<number[]>(this.apiUrl);
+  getServices(): Observable<Service[]> {
+    return this.http.get<Service[]>(this.apiUrl);
   }
 
   // POST
-  criarContato(contato: number): Observable<number> {
-    return this.http.post<number>(this.apiUrl, contato);
+  criarService(Service: Service): Observable<Service> {
+    return this.http.post<Service>(this.apiUrl, Service);
   }
 
   // PUT
-  atualizarContato(contato: number): Observable<number> {
-    return this.http.put<number>(`${this.apiUrl}/${contato}`, contato);
+  atualizarService(Service: Service): Observable<Service> {
+    return this.http.put<Service>(`${this.apiUrl}/${Service}`, Service);
   }
 
   // DELETE
-  deletarContato(id: number): Observable<void> {
+  deletarService(id: Service): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }
