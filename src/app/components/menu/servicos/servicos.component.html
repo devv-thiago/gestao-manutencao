@@ -1,0 +1,18 @@
+<po-page-edit
+  p-title="Servicos"
+  (p-cancel)="cancel()"
+  (p-save)="save()"
+  (p-save-new)="saveNew()">
+
+  <!-- BUILD YOUR FORM HERE -->
+   <form (ngSubmit)="save()">
+    <po-container>
+      <div class="po-row" >
+        <po-input class="po-md-6" formControlName="name" p-label="Nome"/>
+        <po-input class="po-md-6" formControlName="price" p-label="Preço unitário"/>
+      </div>
+    </po-container>
+  </form>
+
+  <po-table [p-columns]="columns"> </po-table>
+</po-page-edit>

@@ -1,0 +1,70 @@
+
+po-button[p-kind="primary"] {
+--text-color: #000000 ;
+}
+po-switch {
+--track-checked: #f2f2f2 ;
+--track-unchecked: #007bff ;
+}
+po-disclaimer {
+--color: #007bff ;
+--border-color: #003366 ;
+--color-icon: #003366 ;
+--text-color: #000000 ;
+--color-hover: #007bff ;
+}
+input.po-input {
+--color: #003366 ;
+--color-hover: #003366 ;
+}
+po-select {
+--color: #003366 ;
+--color-hover: #003366 ;
+}
+po-textarea {
+--color: #003366 ;
+--color-hover: #003366 ;
+}
+po-dropdown {
+--color: #007bff ;
+--color-hover: #007bff ;
+--background-hover: #ffffff ;
+}
+input.po-datepicker {
+--color: #003366 ;
+--color-hover: #003366 ;
+}
+po-datepicker po-button[p-kind="tertiary"] {
+--background-hover: #f6f4f4 ;
+--border-color-hover: #003366 ;
+}
+po-link {
+--text-color-visited: #007bff ;
+--text-color: #f2f2f2 ;
+}
+po-popup po-item-list {
+--color-hover: #ffffff ;
+--background-hover: #003366 ;
+}
+po-popup po-listbox {
+--background: #003366 ;
+}
+po-checkbox {
+--border-color: #003366 ;
+}
+po-multiselect {
+--color: #003366 ;
+--color-hover: #003366 ;
+}
+po-combo {
+--color: #003366 ;
+--color-hover: #003366 ;
+}
+po-accordion {
+--background-color: #003366 ;
+--color: #ffffff ;
+}
+po-tag {
+--color-info: #007bff ;
+--text-color-info: #0b0a0a ;
+}
