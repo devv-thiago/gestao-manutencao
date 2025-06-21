@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { PoModule, PoPageModule } from '@po-ui/ng-components';
+import { PoModule, PoPageModule, PoTableAction, PoTableColumn } from '@po-ui/ng-components';
 
 @Component({
   selector: 'app-servicos',
@@ -15,9 +15,17 @@ import { PoModule, PoPageModule } from '@po-ui/ng-components';
 })
 export class ServicosComponent implements OnInit {
 
-  columns = [
-    {label: "Nome"},
-    {label: "Preço unitário"}
+  columns: Array<PoTableColumn> = [
+    {label: "Nome", property: "name"},
+    {label: "Preço unitário", property: "price"}
+  ]
+    actions: Array<PoTableAction> = [
+       {icon: "an an-pencil-simple",label: "Editar"},
+       {icon: "an an-trash",label: "Excluir"}
+  ]
+
+    items = [
+    { name: "Troca de óleo", price: 100}
   ]
 
   constructor() { }

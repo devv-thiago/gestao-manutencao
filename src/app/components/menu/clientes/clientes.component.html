@@ -11,5 +11,5 @@
       <po-number class="po-lg-3" formControlName="phone" p-label="Telefone" p-clean> </po-number>
     </div>
   </form>
-  <po-table [p-columns]="columns"> </po-table>
+  <po-table [p-items]="items" p-hide-columns-manager="true" p-actions-right="true" [p-actions]="actions" [p-columns]="columns"> </po-table>
 </po-page-edit>

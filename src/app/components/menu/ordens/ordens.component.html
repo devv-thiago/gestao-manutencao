@@ -5,4 +5,15 @@
   (p-save-new)="saveNew()">
 
   <!-- BUILD YOUR FORM HERE -->
+  <form>
+    <div class="po-row">
+      <po-input   class="po-lg-4" p-label="Número"></po-input>
+      <po-select  class="po-lg-4" p-label="Cliente"></po-select>
+      <po-multiselect  class="po-lg-4" p-label="Itens"></po-multiselect>
+    </div>
+    <po-textarea class="po-md-12" p-label="Descrição do problema"></po-textarea>
+    <po-textarea class="po-md-12" p-label="Observações"></po-textarea>
+  </form>
+
+   <po-table p-hide-columns-manager="true" p-actions-right="true" [p-columns]="columns" [p-actions]="actions" [p-items]="items"> </po-table>
 </po-page-edit>
